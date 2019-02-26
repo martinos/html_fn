@@ -2,28 +2,14 @@ PATH
   remote: .
   specs:
     html_fn (0.1.0)
-      fp_rb
+      fn_reader
 
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (5.2.2)
-      concurrent-ruby (~> 1.0, >= 1.0.2)
-      i18n (>= 0.7, < 2)
-      minitest (~> 5.1)
-      tzinfo (~> 1.1)
-    concurrent-ruby (1.1.4)
-    fp_rb (0.1.0)
-      activesupport
-      superators19 (~> 0.9.3)
-    i18n (1.5.3)
-      concurrent-ruby (~> 1.0)
+    fn_reader (0.1.0)
     minitest (5.11.3)
     rake (10.5.0)
-    superators19 (0.9.3)
-    thread_safe (0.3.6)
-    tzinfo (1.2.5)
-      thread_safe (~> 0.1)
 
 PLATFORMS
   ruby
