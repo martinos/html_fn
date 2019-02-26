@@ -29,7 +29,7 @@ include HttpFp
 include HttpFp::Attributes
 
 my_table = 
-  table.([A.class_.("table")]).(
+  table.([class_.("table")]).(
       [thead.([]).(
         [tr.([]).(
           [th.([]).([text.("Name")]),
