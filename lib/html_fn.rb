@@ -4,13 +4,15 @@ require "html_fn/attributes"
 
 module HtmlFn
   fn_reader :tag, :table, :thead, :tr, :th, :td, :tbody, :text, :headers, :row, :html_table,
-    :node, :table, :thead, :th, :td, :th, :tbody
+    :node, :table, :thead, :th, :td, :th, :tbody, :div
 
   @@node = -> tag, attrs, elems {
     <<EOF
 <#{tag} #{Attributes.attrs_to_s.(attrs)}>#{elems.join("\n")}</#{tag}>
 EOF
   }.curry
+
+  @@text = -> a { [a.to_s] }
 
   @@script = node.(:script)
   @@table = node.(:table)
@@ -19,5 +21,5 @@ EOF
   @@th = node.(:th)
   @@td = node.(:td)
   @@tbody = node.(:tbody)
-  @@text = -> a { [a.to_s] }
+  @@div = node.(:div)
 end
