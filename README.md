@@ -1,8 +1,7 @@
 # HtmlFn
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/html_fn`. To experiment with that code, run `bin/console` for an interactive prompt.
+DSL for building HTML without using metaprogram magic. 
 
-TODO: Delete this and the text above, and describe your gem
 
 ## Installation
 
@@ -22,7 +21,43 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+require 'http_fp'
+
+
+include HttpFp
+include HttpFp::Attributes
+
+my_table = 
+  table.([A.class_.("table")]).(
+      [thead.([]).(
+        [tr.([]).(
+          [th.([]).([text.("Name")]),
+          th.([]).([text.("Age")])]
+          )]
+
+        ),
+      tbody.([]).(
+        [tr.([]).([
+          td.([]).([text.("Martin")]),
+          td.([]).([text.("34")]),
+        ])]
+        )]
+      )
+```
+
+
+Note that the html will not be formated. If you want to format it, you can use a function as such:
+
+```ruby
+def pretty_print(a)
+  require "rexml/document"
+  d = REXML::Document.new(a)
+  d.write(s = "", 2)
+  s
+end
+
+```
 
 ## Development
 
