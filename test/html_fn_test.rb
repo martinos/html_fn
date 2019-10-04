@@ -7,7 +7,7 @@ class HtmlFnTest < Minitest::Test
   def setup
     # HtmlFn::Attributes.name.("viewport")
     @bulma = div.([]).([
-      node.(:meta).([A.name.("viewport"),
+      node.(:meta).([A.name_.("viewport"),
                      A.content.("width=device-width, initial-scale=1")]).([]),
       node.(:link).([A.rel.("stylesheet"),
                      A.href.("https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css")]).([]),
