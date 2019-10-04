@@ -22,11 +22,12 @@ Or install it yourself as:
 ## Usage
 
 ```ruby
-require 'http_fp'
+require 'htlm_fp'
 
 
 include HttpFp
 include HttpFp::Attributes
+
 
 my_table = 
   table.([class_.("table")]).(
