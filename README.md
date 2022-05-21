@@ -22,29 +22,27 @@ Or install it yourself as:
 ## Usage
 
 ```ruby
-require 'htlm_fp'
-
+require "html"
 
 include HttpFp
 include HttpFp::Attributes
 
-
-my_table = 
+my_table =
   table.([class_.("table")]).(
-      [thead.([]).(
-        [tr.([]).(
-          [th.([]).([text.("Name")]),
-          th.([]).([text.("Age")])]
-          )]
+    [thead.([]).(
+      [tr.([]).(
+        [th.([]).([text.("Name")]),
+         th.([]).([text.("Age")])]
+      )]
 
-        ),
-      tbody.([]).(
-        [tr.([]).([
-          td.([]).([text.("Martin")]),
-          td.([]).([text.("34")]),
-        ])]
-        )]
-      )
+    ),
+     tbody.([]).(
+      [tr.([]).([
+        td.([]).([text.("Martin")]),
+        td.([]).([text.("34")]),
+      ])]
+    )]
+  )
 ```
 
 
