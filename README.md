@@ -1,7 +1,6 @@
 # HtmlFn
 
-DSL for building HTML without using metaprogram magic. 
-
+DSL for building HTML without using metaprogram magic.
 
 ## Installation
 
@@ -24,29 +23,26 @@ Or install it yourself as:
 ```ruby
 require 'html_fn'
 
-
 include HtmlFn
 include HtmlFn::Attributes
 
-
-my_table = 
+my_table =
   table.([class_.("table")]).(
-      [thead.([]).(
-        [tr.([]).(
-          [th.([]).([text.("Name")]),
-          th.([]).([text.("Age")])]
-          )]
+    [thead.([]).(
+      [tr.([]).(
+        [th.([]).([text.("Name")]),
+         th.([]).([text.("Age")])]
+      )]
 
-        ),
-      tbody.([]).(
-        [tr.([]).([
-          td.([]).([text.("Martin")]),
-          td.([]).([text.("34")]),
-        ])]
-        )]
-      )
+    ),
+     tbody.([]).(
+      [tr.([]).([
+        td.([]).([text.("Martin")]),
+        td.([]).([text.("34")]),
+      ])]
+    )]
+  )
 ```
-
 
 Note that the html will not be formated. If you want to format it, you can use a function as such:
 
