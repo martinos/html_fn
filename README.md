@@ -22,11 +22,11 @@ Or install it yourself as:
 ## Usage
 
 ```ruby
-require 'htlm_fp'
+require 'html_fn'
 
 
-include HttpFp
-include HttpFp::Attributes
+include HtmlFn
+include HtmlFn::Attributes
 
 
 my_table = 
