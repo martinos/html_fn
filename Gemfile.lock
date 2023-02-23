@@ -1,13 +1,13 @@
 PATH
   remote: .
   specs:
-    html_fn (0.3.1)
+    html_fn (0.3.2)
       fn_reader
 
 GEM
   remote: https://rubygems.org/
   specs:
-    fn_reader (0.1.0)
+    fn_reader (0.2.0)
     minitest (5.11.3)
     rake (13.0.3)
 
